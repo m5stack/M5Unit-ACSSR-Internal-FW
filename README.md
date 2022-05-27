@@ -1,8 +1,5 @@
-# M5Template-C-CPP
-Template for M5Stack C and CPP projects.
+# M5Unit-ACSSR-Internal-FW
+## Protocol
 
-## Steps
+<img src="https://static-cdn.m5stack.com/resource/docs/products/unit/acssr/acssr_guide_01.webp" width="100%">
 
-1. Change [clang format check path](./.github/workflows/clang-format-check.yml#L9-L15).
-2. Add License content to [LICENSE](/LICENSE).
-3. Change this [README.md](./README.md#L1-L8).

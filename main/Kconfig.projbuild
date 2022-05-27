@@ -1,0 +1,148 @@
+menu "Peripheral Configuration"
+
+    menu "I2C Slave Config"
+        config I2C_SLAVE_SCL
+            int "SCL GPIO Num"
+            default 0
+            help
+                GPIO number for I2C Slave clock line.
+
+        config I2C_SLAVE_SDA
+            int "SDA GPIO Num"
+            default 1
+            help
+                GPIO number for I2C Slave data line.
+
+        config I2C_SLAVE_PORT_NUM
+            int "Port Number"
+            default 0
+            help
+                Port number for I2C Slave device.
+
+        config I2C_SLAVE_ADDRESS
+            hex "I2C Slave Address"
+            default 0x50
+            help
+                Hardware Address of I2C Slave Port.
+        
+        config OUTPUT_REG
+            hex "SSR Output Address"
+            default 0x00
+            help
+                SSR Output Address.
+        
+        config NEOLED_ADDR
+            hex "Neo LED Address"
+            default 0x10
+            help
+                Neo LED Address.
+
+        config MODIFY_I2C_ADDR
+            hex "Change I2C Slave Address"
+            default 0x20
+            help
+                Change I2C Slave Address.
+    endmenu
+
+    menu "IO Config"
+        config PUSH_BUTTON
+            int "IN GPIO Num"
+            default 3
+            help
+                GPIO number for Push Button.
+
+        config OUTPUT_CONTROL
+            int "OP GPIO Num"
+            default 4
+            help
+                GPIO number for Output Control.
+
+        config RGB_LED
+            int "LED GPIO Num"
+            default 2
+            help
+                GPIO number for rgb pixel LED.
+    endmenu
+
+    menu "Modbus Config"
+        config TXD_PIN 
+            int "TX GPIO Num"
+            default 5
+            help
+                GPIO number for Push Button.
+
+        config RXD_PIN 
+            int "RX GPIO Num"
+            default 6
+            help
+                GPIO number for Output Control.
+
+        config MOD_SLAVE_ADDRESS
+            hex "Modbus Slave Address"
+            default 0x04
+            help
+                Hardware Address of Modbus Slave Port.
+            
+        config SSR_ADDR
+            hex "Coil Address"
+            default 0x0000
+            help
+                Single Write Coil.
+
+        config LED_ADDR
+            hex "Register Address"
+            default 0x0000
+            help
+                Single Write Register.
+        
+        config VER_ADDR
+            hex "Register Address"
+            default 0x0001
+            help
+                Single Write Register.
+        
+        config SLAVE_ADDR
+            hex "Register Address"
+            default 0x0002
+            help
+                Single Write Register.
+
+    endmenu
+    
+    menu "Manufacture Detail"
+        config VERSION_ADDR
+            hex "Device Version Address"
+            default 0x00FE
+            help
+                Device Version Address.
+        
+        config DEVICE_VERSION
+            int "Current Version"
+            default 1
+            help
+                Current Device Version.
+                        
+    endmenu
+
+    menu "LED Flash Config"
+        config FAST_FLASH
+            int "Fast Flash Delay"
+            default 50
+            help
+                Setup LED Flashing.
+
+        config SLOW_FLASH
+            int "Slow Flash Delay"
+            default 250
+            help
+                Run LED Flashing.
+        
+        config LED_BRIGHTNESS
+            int "LED Brightness"
+            default 5
+            help
+                0-100 Brightness Level.
+                
+    endmenu
+
+endmenu

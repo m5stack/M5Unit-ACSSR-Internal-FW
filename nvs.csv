@@ -1,0 +1,6 @@
+key,type,encoding,value
+SELECT_MODE,namespace,, 
+mode,data,u8,1
+ctrl,data,u8,0
+i2c_addr,data,u8,80
+slave_addr,data,u8,4
